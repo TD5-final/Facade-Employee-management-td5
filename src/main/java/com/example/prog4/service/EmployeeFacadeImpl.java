@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class EmployeeFacadeImpl extends EmployeeFacade {
+public class EmployeeFacadeImpl implements EmployeeFacade {
   private final CustomEmployeeService customEmployeeService;
   private final CnapsService cnapsNumberService;
 
