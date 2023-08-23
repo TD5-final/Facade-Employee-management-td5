@@ -6,6 +6,7 @@ import com.example.prog4.repository.EmployeeRepository;
 import com.example.prog4.repository.dao.EmployeeManagerDao;
 import com.example.prog4.repository.entity.Employee;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -15,6 +16,7 @@ import java.util.List;
 
 @Service
 @AllArgsConstructor
+@NoArgsConstructor
 public class EmployeeService {
     private EmployeeRepository repository;
     private EmployeeManagerDao employeeManagerDao;

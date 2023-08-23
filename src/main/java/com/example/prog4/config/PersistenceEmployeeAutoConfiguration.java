@@ -45,7 +45,7 @@ public class PersistenceEmployeeAutoConfiguration {
   }
 
   @Primary
-  @Bean
+  @Bean(name = "employeeEntityManager")
   public LocalContainerEntityManagerFactoryBean employeeEntityManager() {
     LocalContainerEntityManagerFactoryBean em
       = new LocalContainerEntityManagerFactoryBean();
@@ -66,7 +66,7 @@ public class PersistenceEmployeeAutoConfiguration {
   }
 
   @Primary
-  @Bean
+  @Bean(name = "employeeTransactionManager")
   public PlatformTransactionManager employeeTransactionManager() {
 
     JpaTransactionManager transactionManager

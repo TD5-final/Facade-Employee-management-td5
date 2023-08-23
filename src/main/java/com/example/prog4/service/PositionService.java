@@ -4,12 +4,14 @@ import com.example.prog4.repository.PositionCnapsRepository;
 import com.example.prog4.repository.PositionRepository;
 import com.example.prog4.repository.entity.Position;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 @AllArgsConstructor
+@NoArgsConstructor
 public class PositionService {
     private PositionRepository repository;
 

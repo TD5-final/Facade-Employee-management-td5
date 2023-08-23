@@ -5,12 +5,14 @@ import com.example.prog4.repository.PhoneCnapsRepository;
 import com.example.prog4.repository.PhoneRepository;
 import com.example.prog4.repository.entity.Phone;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
 @Component
 @AllArgsConstructor
+@NoArgsConstructor
 public class PhoneMapper {
     private static final String JOIN_ELEMENT = ",";
     private PhoneRepository phoneCnapsRepository;
