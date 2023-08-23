@@ -4,6 +4,7 @@ import com.example.prog4.controller.PopulateController;
 import com.example.prog4.controller.mapper.EmployeeMapper;
 import com.example.prog4.model.Employee;
 import com.example.prog4.model.EmployeeFilter;
+import com.example.prog4.service.CustomEmployeeService;
 import com.example.prog4.service.EmployeeService;
 import jakarta.servlet.http.HttpSession;
 import lombok.AllArgsConstructor;
@@ -21,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class EmployeeViewController extends PopulateController {
     private EmployeeService employeeService;
     private EmployeeMapper employeeMapper;
-
+    private final CustomEmployeeService customEmployeeService;
     @GetMapping("/list")
     public String getAll(
             @ModelAttribute EmployeeFilter filters,
@@ -52,12 +53,11 @@ public class EmployeeViewController extends PopulateController {
 
     @GetMapping("/show/{eId}")
     public String showEmployee(@PathVariable String eId, Model model) {
-        Employee toShow = employeeMapper.toView(employeeService.getOne(eId));
-        model.addAttribute("employee", toShow);
+        com.example.prog4.repository.entity.Employee employee = customEmployeeService.getEmployeeWithCnaps(eId);
+        model.addAttribute("employee", employee);
 
         return "employee_show";
     }
-
     @GetMapping("/")
     public String home() {
         return "redirect:/employee/list";
