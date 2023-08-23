@@ -5,9 +5,11 @@ import com.example.prog4.controller.mapper.EmployeeMapper;
 import com.example.prog4.model.Employee;
 import com.example.prog4.model.EmployeeFilter;
 import com.example.prog4.service.CustomEmployeeService;
+import com.example.prog4.service.EmployeeFacade;
 import com.example.prog4.service.EmployeeService;
 import jakarta.servlet.http.HttpSession;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,7 +24,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class EmployeeViewController extends PopulateController {
     private EmployeeService employeeService;
     private EmployeeMapper employeeMapper;
-    private final CustomEmployeeService customEmployeeService;
+    private CustomEmployeeService customEmployeeService;
+
+    private final EmployeeFacade employeeFacade;
+
+    @Autowired
+    public EmployeeViewController(EmployeeFacade employeeFacade) {
+        this.employeeFacade = employeeFacade;
+    }
     @GetMapping("/list")
     public String getAll(
             @ModelAttribute EmployeeFilter filters,
@@ -53,7 +62,7 @@ public class EmployeeViewController extends PopulateController {
 
     @GetMapping("/show/{eId}")
     public String showEmployee(@PathVariable String eId, Model model) {
-        com.example.prog4.repository.entity.Employee employee = customEmployeeService.getEmployeeWithCnaps(eId);
+        com.example.prog4.repository.entity.Employee employee = employeeFacade.getEmployeeWithCnaps(eId);
         model.addAttribute("employee", employee);
 
         return "employee_show";

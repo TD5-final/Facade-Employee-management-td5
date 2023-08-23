@@ -1,7 +1,6 @@
 package com.example.prog4;
 
 import com.example.prog4.repository.EmployeeRepository;
-import com.example.prog4.repository.cnapsEntity.EmployeeCnaps;
 import com.example.prog4.repository.cnapsRepository.EmployeeCnapsRepository;
 import com.example.prog4.repository.entity.Employee;
 import com.example.prog4.repository.entity.enums.Csp;
@@ -54,7 +53,7 @@ public class MultippleDbTest {
   @Test
   @Transactional("employeeTransactionManager")
   public void whenCreatingCnaps_thenCreated() {
-    EmployeeCnaps employee = new EmployeeCnaps();
+    com.example.prog4.repository.cnapsEntity.Employee employee = new com.example.prog4.repository.cnapsEntity.Employee();
     employee.setFirstName("John");
     employee.setLastName("Doe");
     employee.setAddress("Ivandry");

@@ -33,6 +33,7 @@ public class Employee implements Serializable {
     private String personalEmail;
     private String professionalEmail;
     private String registrationNumber;
+    private String endToEndId;
 
     private LocalDate birthDate;
     private LocalDate entranceDate;
