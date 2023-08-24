@@ -1,4 +1,4 @@
-package com.example.prog4.repository.cnapsEntity;
+package com.example.prog4.repository.cnaps.cnapsEntity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

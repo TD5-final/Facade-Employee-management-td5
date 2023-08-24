@@ -1,4 +1,4 @@
-package com.example.prog4.repository.cnapsEntity;
+package com.example.prog4.repository.cnaps.cnapsEntity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

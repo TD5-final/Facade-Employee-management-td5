@@ -1,10 +1,10 @@
 package com.example.prog4;
 
-import com.example.prog4.repository.EmployeeRepository;
-import com.example.prog4.repository.cnapsRepository.EmployeeCnapsRepository;
-import com.example.prog4.repository.entity.Employee;
-import com.example.prog4.repository.entity.enums.Csp;
-import com.example.prog4.repository.entity.enums.Sex;
+import com.example.prog4.repository.employee.EmployeeRepository;
+import com.example.prog4.repository.cnaps.EmployeeCnapsRepository;
+import com.example.prog4.repository.employee.entity.Employee;
+import com.example.prog4.repository.employee.entity.enums.Csp;
+import com.example.prog4.repository.employee.entity.enums.Sex;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,7 +53,7 @@ public class MultippleDbTest {
   @Test
   @Transactional("employeeTransactionManager")
   public void whenCreatingCnaps_thenCreated() {
-    com.example.prog4.repository.cnapsEntity.Employee employee = new com.example.prog4.repository.cnapsEntity.Employee();
+    com.example.prog4.repository.cnaps.cnapsEntity.Employee employee = new com.example.prog4.repository.cnaps.cnapsEntity.Employee();
     employee.setFirstName("John");
     employee.setLastName("Doe");
     employee.setAddress("Ivandry");

@@ -1,9 +1,9 @@
 package com.example.prog4.service;
 
-import com.example.prog4.model.Employee;
-import com.example.prog4.model.Phone;
+import com.example.prog4.model.employee.Employee;
+import com.example.prog4.model.employee.Phone;
 import com.example.prog4.model.exception.InternalServerErrorException;
-import com.example.prog4.repository.entity.Position;
+import com.example.prog4.repository.employee.entity.Position;
 import com.opencsv.CSVWriter;
 
 import java.io.IOException;

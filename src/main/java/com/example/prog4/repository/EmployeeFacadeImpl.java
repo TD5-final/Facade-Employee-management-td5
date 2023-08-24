@@ -1,6 +1,7 @@
-package com.example.prog4.service;
+package com.example.prog4.repository;
 
-import com.example.prog4.repository.entity.Employee;
+import com.example.prog4.repository.employee.entity.Employee;
+import com.example.prog4.service.CustomEmployeeService;
 import com.example.prog4.service.cnapsService.CnapsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.example.prog4.model;
+package com.example.prog4.model.employee;
 
 
 import lombok.AllArgsConstructor;

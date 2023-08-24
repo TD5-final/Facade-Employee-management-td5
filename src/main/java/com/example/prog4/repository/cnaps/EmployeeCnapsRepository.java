@@ -1,6 +1,6 @@
-package com.example.prog4.repository.cnapsRepository;
+package com.example.prog4.repository.cnaps;
 
-import com.example.prog4.repository.cnapsEntity.Employee;
+import com.example.prog4.repository.cnaps.cnapsEntity.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -2,10 +2,10 @@ package com.example.prog4.controller.view;
 
 import com.example.prog4.controller.PopulateController;
 import com.example.prog4.controller.mapper.EmployeeMapper;
-import com.example.prog4.model.Employee;
+import com.example.prog4.model.employee.Employee;
 import com.example.prog4.model.EmployeeFilter;
 import com.example.prog4.service.CustomEmployeeService;
-import com.example.prog4.service.EmployeeFacade;
+import com.example.prog4.repository.EmployeeFacade;
 import com.example.prog4.service.EmployeeService;
 import jakarta.servlet.http.HttpSession;
 import lombok.AllArgsConstructor;
@@ -62,7 +62,7 @@ public class EmployeeViewController extends PopulateController {
 
     @GetMapping("/show/{eId}")
     public String showEmployee(@PathVariable String eId, Model model) {
-        com.example.prog4.repository.entity.Employee employee = employeeFacade.getEmployeeWithCnaps(eId);
+        com.example.prog4.repository.employee.entity.Employee employee = employeeFacade.getEmployeeWithCnaps(eId);
         model.addAttribute("employee", employee);
 
         return "employee_show";

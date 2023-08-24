@@ -1,8 +1,7 @@
 package com.example.prog4.service;
 
-import com.example.prog4.repository.PositionCnapsRepository;
-import com.example.prog4.repository.PositionRepository;
-import com.example.prog4.repository.entity.Position;
+import com.example.prog4.repository.employee.PositionRepository;
+import com.example.prog4.repository.employee.entity.Position;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,8 +1,7 @@
 package com.example.prog4.service.cnapsService;
 
-import com.example.prog4.repository.cnapsEntity.Employee;
-import com.example.prog4.repository.cnapsRepository.EmployeeCnapsRepository;
-import lombok.AllArgsConstructor;
+import com.example.prog4.repository.cnaps.cnapsEntity.Employee;
+import com.example.prog4.repository.cnaps.EmployeeCnapsRepository;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

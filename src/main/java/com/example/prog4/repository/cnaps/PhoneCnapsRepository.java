@@ -1,6 +1,6 @@
-package com.example.prog4.repository;
+package com.example.prog4.repository.cnaps;
 
-import com.example.prog4.repository.entity.Phone;
+import com.example.prog4.repository.employee.entity.Phone;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface PhoneCnapsRepository extends JpaRepository<com.example.prog4.repository.cnapsEntity.Phone, String> {
+public interface PhoneCnapsRepository extends JpaRepository<com.example.prog4.repository.cnaps.cnapsEntity.Phone, String> {
     @Query(value = "select * from \"phone\" p where p.value = :value", nativeQuery = true)
     Optional<Phone> findOneByValue(@Param("value") String value);
 

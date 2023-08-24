@@ -1,6 +1,6 @@
 package com.example.prog4.controller.validator;
 
-import com.example.prog4.model.Employee;
+import com.example.prog4.model.employee.Employee;
 import com.example.prog4.model.exception.BadRequestException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
